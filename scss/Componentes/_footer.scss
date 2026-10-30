@@ -1,0 +1,47 @@
+// COMPONENTE: footer
+.footer {
+  background: $color-gray;
+  margin-top: 100px;
+  padding: 64px 32px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      width: min(100%, 1110px);
+      margin: 0 auto;
+    }
+  }
+
+  &__logo { width: 55px; height: 55px; color: $color-teal; @include desktop { display: none; } }
+
+  &__links {
+    display: grid;
+    gap: 20px;
+    @include desktop {
+      grid-auto-flow: column;
+      grid-template-rows: repeat(2, auto);
+      column-gap: 160px;
+      text-align: left;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    color: $color-dark;
+    transition: color .2s;
+    &:hover, &--active { color: $color-teal; }
+  }
+
+  &__social {
+    display: flex;
+    gap: 40px;
+    color: $color-dark;
+    svg { width: 24px; height: 24px; }
+  }
+}

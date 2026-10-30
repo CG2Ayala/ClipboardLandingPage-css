@@ -1,0 +1,17 @@
+.logos {
+  display: flex;
+  flex-wrap: wrap;                   
+  justify-content: space-around;
+  align-items: center;
+  gap: 24px 32px;
+  width: min(100% - 64px, 1110px);
+  margin: 80px auto 0;
+
+  @include desktop { flex-wrap: nowrap; justify-content: space-between; }
+
+  &__item {
+    height: 48px;
+    width: auto;
+    opacity: .8;
+  }
+}

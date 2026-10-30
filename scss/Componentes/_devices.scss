@@ -1,0 +1,15 @@
+.devices {
+  position: relative;
+  width: min(100%, 812px);
+  margin: 48px auto 0;
+  aspect-ratio: 812 / 475;
+
+    &__img {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    object-fit: contain;
+  }
+}
+
+

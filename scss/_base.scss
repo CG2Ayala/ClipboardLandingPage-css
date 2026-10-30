@@ -1,0 +1,40 @@
+// RESET + estilos globales
+*, *::before, *::after {
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-main;
+  color: $color-gray;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  background: $color-light;
+}
+
+img { display: block; max-width: 100%; }
+ul  { list-style: none; }
+a   { text-decoration: none; color: inherit; }
+
+// Bloque generico de seccion
+.section {
+  width: min(100% - 64px, 730px);
+  margin: 80px auto 0;
+  text-align: center;
+
+  &__title {                       
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: $color-dark;
+    margin-bottom: 16px;
+
+    @include desktop { font-size: 36px; }
+  }
+
+  &__text { font-size: 16px; @include desktop { font-size: 18px; } }
+
+  &--cta { margin-top: 100px; }    
+}

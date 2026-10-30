@@ -1,0 +1,28 @@
+// COMPONENTE: perks (3 columnas con GRID)
+.perks {
+  display: grid;
+  grid-template-columns: 1fr;          // móvil: apilado
+  gap: 56px;
+  margin-top: 64px;
+
+  @include desktop {
+    width: $container-width;
+    margin-left: calc(50% - #{$container-width * 0.5});  // interpolación #{ }
+    grid-template-columns: repeat(3, 1fr);              // 3 columnas iguales
+    gap: 30px;
+  }
+}
+
+.perk {
+  &__icon {
+    width: 44px; height: 40px;
+    margin: 0 auto 36px;
+    color: $color-gray;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: $color-dark;
+    margin-bottom: 8px;
+  }
+}

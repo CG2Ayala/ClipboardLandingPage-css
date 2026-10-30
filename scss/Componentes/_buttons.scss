@@ -1,0 +1,22 @@
+.btn {
+  display: flex;
+  justify-content: center;   
+  align-items: center;     
+  height: 56px;
+  width: 100%;               
+  border-radius: $radius-pill;
+  color: $color-white;
+  font-size: 18px;
+  font-weight: 600;
+  transition: transform .2s, filter .2s;
+
+  &--ios { @include button-color($color-teal, #89e5c7); }
+  &--mac { @include button-color($color-blue, #000); }
+
+&:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.08);
+}
+
+  @include tablet { width: 227px; }
+}

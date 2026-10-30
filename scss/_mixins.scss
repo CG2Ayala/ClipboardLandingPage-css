@@ -1,0 +1,20 @@
+// Media query reutilizable.
+@mixin tablet {
+  @media (min-width: $bp-tablet) and (max-width:#{$bp-desktop - 1}) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: $bp-desktop) { @content; }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-color($bg, $glow) {
+  background-color: $bg;
+  box-shadow: 0 10px 20px rgba($glow, 0.5),
+              inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+}

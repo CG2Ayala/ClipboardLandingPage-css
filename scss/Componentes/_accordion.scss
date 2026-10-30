@@ -1,0 +1,22 @@
+.faq{ width:min(100% - 64px, 730px); margin:80px auto 0; text-align:left; }
+
+.accordion{
+  border-bottom:1px solid #e3e8ea;
+
+  &__toggle{ display:none; }
+
+  &__title{
+    display:flex; justify-content:space-between;
+    padding:20px 0; font-size:20px; font-weight:600;
+    color:$color-dark; cursor:pointer;
+    &::after{ content:'+'; color:$color-teal; font-size:24px; }
+  }
+
+  &__content{
+    max-height:0; overflow:hidden; transition:max-height .4s;
+    p{ padding-bottom:20px; }
+  }
+
+  &__toggle:checked ~ &__content{ max-height:200px; }
+  &__toggle:checked ~ &__title::after{ content:'–'; }
+}

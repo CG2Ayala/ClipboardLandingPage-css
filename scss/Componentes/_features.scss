@@ -1,0 +1,45 @@
+.features {
+  width: min(100% - 64px, $container-width);
+  margin: 80px auto 0;
+  display: grid;
+  grid-template-columns: 1fr;    
+  gap: 40px;
+  align-items: center;
+  text-align: center;
+
+  @include desktop {
+    grid-template-columns: 752fr 350fr;   
+    gap: 60px;
+    text-align: left;
+  }
+
+  &__media { position: relative; }
+
+  &__screen {                      
+    position: absolute;
+    top: 5%;  left: 4%;
+    width: 92%;  height: 69%;
+    background: url('../img/popup-bg.jpg') center / cover;
+    border-radius: 2px;
+    @include flex-center;
+    overflow: hidden;
+  }
+
+
+  &__list {
+    display: grid;
+    gap: 56px;                        
+  }
+
+}
+
+.feature {
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: $color-dark;
+    margin-bottom: 8px;
+  }
+  
+}
+
